@@ -1,0 +1,33 @@
+<html>
+    <header>
+        <title>Stars Wars</title>
+    </header>
+    <body>
+        <blockquote>
+            <p>Name : {{ Personnage.name }}</p>
+            <p>Height : {{ Personnage.height }}</p>
+            <p>Mass : {{ Personnage.mass }}</p>
+            <p>Hair Color : {{ Personnage.hair_color }}</p>
+            <p>Skin Color : {{ Personnage.skin_color }}</p>
+            <p>Eye color : {{ Personnage.eye_color }}</p>
+            <p>Birth Year : {{ Personnage.birth_year }}</p>
+            <p>Gender : {{ Personnage.gender }}</p>
+            <p>Home World : {{ Personnage.homeworld }}</p>
+            <p>Films : 
+                <a *ngFor="let film of Personnage.films; let i = index" [href]=""> Film {{ i+1 }} </a>
+            </p>
+            <p>Species : 
+                <a *ngFor="let spicie of Personnage.species; let i = index" [href]="">Specie {{ i+1 }}</a>
+            </p>
+            <p>Vehicles : 
+                <a  *ngFor="let vehicle of Personnage.vehicles; let i = index" [href]="">Vehicle {{ i+1 }}</a>
+            </p>
+            <p>Starships : 
+                <a *ngFor="let starship of Personnage.starships; let i = index" [href]=""> Starship {{ i+1 }} </a>
+            </p>
+            <p>Created : {{ Personnage.created | date : 'dd/MM/YYYY' }}</p>
+            <p>Edited : {{ Personnage.edited | date : 'dd/MM/YYYY' }}</p>
+            <p>URL : {{ Personnage.url }}</p>
+        </blockquote>
+    </body>
+</html>
